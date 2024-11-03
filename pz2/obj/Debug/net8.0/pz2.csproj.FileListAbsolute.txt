@@ -1,0 +1,15 @@
+C:\Users\MSI\Desktop\репо\mdk-01-04\pz2\bin\Debug\net8.0\pz2.exe
+C:\Users\MSI\Desktop\репо\mdk-01-04\pz2\bin\Debug\net8.0\pz2.deps.json
+C:\Users\MSI\Desktop\репо\mdk-01-04\pz2\bin\Debug\net8.0\pz2.runtimeconfig.json
+C:\Users\MSI\Desktop\репо\mdk-01-04\pz2\bin\Debug\net8.0\pz2.dll
+C:\Users\MSI\Desktop\репо\mdk-01-04\pz2\bin\Debug\net8.0\pz2.pdb
+C:\Users\MSI\Desktop\репо\mdk-01-04\pz2\obj\Debug\net8.0\pz2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MSI\Desktop\репо\mdk-01-04\pz2\obj\Debug\net8.0\pz2.AssemblyInfoInputs.cache
+C:\Users\MSI\Desktop\репо\mdk-01-04\pz2\obj\Debug\net8.0\pz2.AssemblyInfo.cs
+C:\Users\MSI\Desktop\репо\mdk-01-04\pz2\obj\Debug\net8.0\pz2.csproj.CoreCompileInputs.cache
+C:\Users\MSI\Desktop\репо\mdk-01-04\pz2\obj\Debug\net8.0\pz2.sourcelink.json
+C:\Users\MSI\Desktop\репо\mdk-01-04\pz2\obj\Debug\net8.0\pz2.dll
+C:\Users\MSI\Desktop\репо\mdk-01-04\pz2\obj\Debug\net8.0\refint\pz2.dll
+C:\Users\MSI\Desktop\репо\mdk-01-04\pz2\obj\Debug\net8.0\pz2.pdb
+C:\Users\MSI\Desktop\репо\mdk-01-04\pz2\obj\Debug\net8.0\pz2.genruntimeconfig.cache
+C:\Users\MSI\Desktop\репо\mdk-01-04\pz2\obj\Debug\net8.0\ref\pz2.dll
