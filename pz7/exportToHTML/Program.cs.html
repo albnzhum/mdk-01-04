@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>Program.cs</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #0000ff;}
+.s1 { color: #000000;}
+.s2 { color: #000000;}
+.s3 { color: #a31515;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Program.cs</font>
+</center></td></tr></table>
+<pre><span class="s0">using </span>System.Runtime.InteropServices;
+
+<span class="s0">namespace </span>pz7;
+
+<span class="s0">class </span>Program
+{
+    <span class="s0">static void </span>Main(<span class="s0">string</span>[] args)
+    {
+        MEMORYSTATUSEX mem = <span class="s0">new </span>MEMORYSTATUSEX();
+        mem.dwLength = (<span class="s0">uint</span>)Marshal.SizeOf(<span class="s0">typeof</span>(MEMORYSTATUSEX));
+
+        <span class="s0">if </span>(_GlobalMemoryStatusEx(<span class="s0">ref </span>mem))
+        {
+            Console.WriteLine(<span class="s3">$&quot;Объем физической памяти: </span>{mem.ullTotalPhys} <span class="s3">байт&quot;</span>);
+            Console.WriteLine(<span class="s3">$&quot;Объем доступной физической памяти: </span>{mem.ullAvailPhys} <span class="s3">байт&quot;</span>);
+            Console.WriteLine(<span class="s3">$&quot;Объем файла подкачки: </span>{mem.ullTotalPageFile} <span class="s3">байт&quot;</span>);
+            Console.WriteLine(<span class="s3">$&quot;Объем доступного файла подкачки: </span>{mem.ullAvailPageFile} <span class="s3">байт&quot;</span>);
+            Console.WriteLine(<span class="s3">$&quot;Объем виртуальной памяти: </span>{mem.ullTotalVirtual} <span class="s3">байт&quot;</span>);
+            Console.WriteLine(<span class="s3">$&quot;Объем доступной виртуальной памяти: </span>{mem.ullAvailVirtual} <span class="s3">байт&quot;</span>);
+            Console.WriteLine(<span class="s3">$&quot;Загрузка памяти: </span>{mem.dwMemoryLoad} <span class="s3">%&quot;</span>);
+        }
+        <span class="s0">else</span>
+        {
+            Console.WriteLine(<span class="s3">&quot;Ошибка при получение информации о памяти&quot;</span>);
+        }
+
+        Console.ReadKey();
+    }
+
+    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Auto)]
+    <span class="s0">public struct </span>MEMORYSTATUSEX
+    {
+        <span class="s0">public uint </span>dwLength;
+        <span class="s0">public uint </span>dwMemoryLoad;
+        <span class="s0">public ulong </span>ullTotalPhys;
+        <span class="s0">public ulong </span>ullAvailPhys;
+        <span class="s0">public ulong </span>ullTotalPageFile;
+        <span class="s0">public ulong </span>ullAvailPageFile;
+        <span class="s0">public ulong </span>ullTotalVirtual;
+        <span class="s0">public ulong </span>ullAvailVirtual;
+        <span class="s0">public ulong </span>ullAvailExtendedVirtual;
+    }
+    
+    [<span class="s0">return</span>: MarshalAs(UnmanagedType.Bool)]
+    [DllImport(<span class="s3">&quot;kernel32.dll&quot;</span>, CharSet = CharSet.Auto, EntryPoint = <span class="s3">&quot;GlobalMemoryStatusEx&quot;</span>, 
+        SetLastError = <span class="s0">true</span>)]
+    <span class="s0">static extern bool </span>_GlobalMemoryStatusEx(<span class="s0">ref </span>MEMORYSTATUSEX memEx);
+}</pre>
+</body>
+</html>
